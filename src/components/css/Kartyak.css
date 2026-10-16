@@ -1,0 +1,12 @@
+.kartyak{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 90%;
+}
+
+@media (max-width: 600px) {
+  .kartyak {
+    flex-direction: column;
+  }
+}

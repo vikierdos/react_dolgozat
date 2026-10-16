@@ -1,9 +1,15 @@
 .kartya {
-  display: flex;
-  flex-direction: row;
-  
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 30%;
 }
 
 .kartya span {
+    display: flex;
+    flex-direction: row;
+}
 
+h1{
+    font-size: 25pt;
 }

@@ -1,5 +1,6 @@
 import type { TanuloSzobaTipus } from '../adatok'
 import Kartya from './Kartya';
+import './css/Kartyak.css'
 
 interface kartyakProps{
     lista: TanuloSzobaTipus[],
@@ -8,7 +9,7 @@ interface kartyakProps{
 
 function Kartyak({lista, setFoglaltHelyek}:kartyakProps){
     return(
-        <div>
+        <div className='kartyak'>
             {lista.map((e,i)=>(<Kartya key={e.id} elem={e} index={i} setFoglaltHelyek={setFoglaltHelyek}/>))}
         </div>
     )
