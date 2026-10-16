@@ -1,21 +1,25 @@
+import type { TanuloSzobaTipus } from "../adatok"
 
 
-interface KartyaProps(){
-    e: 
+interface KartyaProps{
+    elem: TanuloSzobaTipus
+    ,index: number
+    ,setFoglaltHelyek: void
 }
 
 
 
-function Kartya() {
+function Kartya({elem, index, setFoglaltHelyek}:KartyaProps) {
 
   return (
     <div className="kartya">
-        <h1>props.</h1>
-        <p>Szoba tipusa</p>
-        <p>emelet</p>
-        <p>ferohely</p>
-        <p>lefoglalt helyek</p>
-        <button>lefoglalo gomb</button>
+        <h1>{elem.szoba_nev}</h1>
+        <p>{elem.szobatipus}</p>
+        <p>{elem.id}</p>
+        <p>{elem.emelet}</p>
+        <p>{elem.ferohely}</p>
+        <p>{elem.foglalt_helyek}</p>
+        <button onClick={setFoglaltHelyek}>Helyet foglalok!</button>
     </div>
   )
 }
