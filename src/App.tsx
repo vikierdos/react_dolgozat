@@ -7,8 +7,11 @@ function App() {
   const [lista,setLista]=useState<TanuloSzobaTipus[]>(TANULOSZOBAK)
 
   function setFoglaltHelyek(index:number){
+    console.log(lista[index].id)
     const ujLista:TanuloSzobaTipus[] = [...lista]
-    ujLista[index].foglalt_helyek+=1
+    if(ujLista[index].ferohely > ujLista[index].foglalt_helyek){
+      ujLista[index].foglalt_helyek+=1
+    }
     setLista(ujLista)
   }
 
